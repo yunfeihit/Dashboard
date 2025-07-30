@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('font/roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('font/roboto-variablefont_wdthwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+    --one-basic-unit: 1rem
+}
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: robotoregular;    
+}
+
+
+#container {
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 5fr;
+    height: 100vh;
+}
+
+#header {
+    grid-column: 2 / 3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    
+}
+
+
+
+
+/* Styles of Sidebar */
+
+#sidebar {
+    grid-row: 1 / -1;
+    background-color: rgb(25, 146, 212);
+    padding-top: calc(0.7*var(--one-basic-unit));
+
+    /* Sidebar Grid */
+
+    display: grid;
+    grid-template-rows: repeat(13, calc(2.5*var(--one-basic-unit)));
+    justify-content: start;
+}
+
+
+#sidebar img {
+    height: calc(1.1*var(--one-basic-unit));
+    margin-left: calc(1.7*var(--one-basic-unit));
+    margin-right: var(--one-basic-unit);
+    filter: brightness(0) invert(1);
+    vertical-align: middle;
+}
+
+
+#sidebar a {
+    text-decoration: none;
+    font-family: 'robotoregular';
+    font-size: var(--one-basic-unit);
+    color: white;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+/* styles of the title in Side bar */
+#nav-title img {
+    height: calc(2.2*var(--one-basic-unit));
+    margin-left: calc(0.8*var(--one-basic-unit));
+    margin-right: calc(0.7*var(--one-basic-unit));
+}
+
+#nav-title a {
+    font-size:calc(1.2*var(--one-basic-unit))
+}
+
+
+/* Styles of Main Content */
+
+#main-content {
+    background-color: #e0e6ec;
+}
+
+
+
+
+/* Styles of the header */
+#header-line-one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+#right-part {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: calc(3*var(--one-basic-unit));
+    gap: calc(2.5*var(--one-basic-unit));
+}
+
+#search-input {
+    display: flex;
+    align-items: center;
+    margin-left: calc(2*var(--one-basic-unit))
+}
+
+#search-input img {
+    filter: brightness(0)
+}
+
+
+#search-box {
+    border: none;
+    background-color: #e0e6ec;
+    border-radius: 8px;
+    width: calc(25*var(--one-basic-unit));
+    margin-left: calc(0.7*var(--one-basic-unit))
+}
+
+#bell {
+    filter: brightness(0);
+}
+
+#head-img {
+    border-radius: 50%;
+    height: calc(3*var(--one-basic-unit));
+}
+
+
+
+
+
+
